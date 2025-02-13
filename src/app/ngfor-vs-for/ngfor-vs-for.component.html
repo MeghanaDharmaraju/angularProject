@@ -111,10 +111,23 @@
 
   <div class="col-2">
     <ol>
-      @for (comp of companyList; track comp;) {
-      <li>
-        {{comp}}
-      </li>
+      @for (comp of companyList; track comp; let f=$first, l=$last, e=$even, o=$odd, c=$count, i=$index) {
+        @if(f == true){
+          <li style="color: green;">
+            {{comp}}
+          </li>
+        }@else if (l == true) {
+          <li style="color: red;">
+            {{comp}}
+          </li>
+        }@else {
+          <li>
+            {{comp}}
+          </li>
+        }
+      }
+      @empty {
+        No Company found...
       }
     </ol>
   </div>

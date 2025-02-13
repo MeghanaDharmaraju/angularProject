@@ -15,4 +15,6 @@ export class NgforVsForComponent {
   ]
 
   companyList: string[] = ['Atos', 'Capgemini', 'TCS', 'Infosys', 'Tech Mahindra', 'Google', 'Amazon'];
+
+  // companyList: string[] = [];
 }
