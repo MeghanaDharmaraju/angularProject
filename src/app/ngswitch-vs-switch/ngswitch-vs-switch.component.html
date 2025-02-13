@@ -1,0 +1,59 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h2>Example of *ngSwitch vs &#64;switch</h2>
+  </div>
+</div>
+
+<!-- *ngSwitch block -->
+
+<!-- <div class="col-12 text-center">
+  <h6>Example of *ngSwitch</h6>
+</div>
+
+<div class="row text-center">
+  <div class="col-12">
+    <button (click)="set(1)" class="btn btn-success m-1">1st Grade</button>
+    <button (click)="set(2)" class="btn btn-primary m-1">2nd Grade</button>
+    <button (click)="set(3)" class="btn btn-warning m-1">3rd Grade</button>
+  </div>
+
+  <div [ngSwitch]="grade" class="m-3">
+    <div *ngSwitchCase="1">Congratulations on your outstanding achievement - First Grade</div>
+    <div *ngSwitchCase="2">Congratulations on your achievement - Second Grade</div>
+    <div *ngSwitchCase="3">Congratulations on your achievement - Third Grade</div>
+    <div *ngSwitchDefault>No result found...</div>
+  </div>
+</div> -->
+
+
+<!-- @Switch block -->
+
+
+<div class="col-12 text-center">
+  <h6>Example of &#64;switch</h6>
+</div>
+
+<div class="row text-center">
+  <div class="col-12">
+    <button (click)="set(1)" class="btn btn-success m-1">1st Grade</button>
+    <button (click)="set(2)" class="btn btn-primary m-1">2nd Grade</button>
+    <button (click)="set(3)" class="btn btn-warning m-1">3rd Grade</button>
+  </div>
+
+  <div class="col text-center">
+    @switch (grade) {
+      @case (1) {
+        Congratulations on your outstanding achievement - First Grade
+      }
+      @case (2) {
+        Congratulations on your achievement - Second Grade
+      }
+      @case (3) {
+        Congratulations on your achievement - Third Grade
+      }
+      @default {
+        No result found...
+      }
+    }
+  </div>
+</div>
