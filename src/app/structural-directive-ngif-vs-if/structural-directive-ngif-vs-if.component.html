@@ -4,6 +4,14 @@
   </div>
 </div>
 
+<!-- *ngIf block -->
+
+<!-- <div class="row text-center">
+  <div class="col-12 m-3">
+    <h6>Example of *ngIf</h6>
+  </div>
+</div>
+
 <div class="row text-center">
   <div class="col-4">
     <div (click)="onClick()">
@@ -31,10 +39,62 @@
     <div *ngIf="input1 !== input2">
       <h4>Both values are not equal</h4>
     </div>
-    
+
     <div *ngIf="input1 === input2">
       <h4>Both values are equal</h4>
     </div>
+  </div>
+
+</div> -->
+
+
+<!-- @If() block -->
+
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h6>Example of &#64;if</h6>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <div (click)="onClick()">
+      <input type="checkbox" name="" id="">Terms and Condition
+    </div>
+    @if(isChecked){
+    <div>
+      <button class="btn btn-success">Submit</button>
+    </div>
+    }
+  </div>
+
+  <div class="col-4">
+    @if(isInputBox){
+    <div>
+      <input type="text" value="FEDLearing">
+    </div>
+    }
+    <button (click)="showfield()" class="btn btn-primary m-2">Show</button>
+    <button (click)="hidefield()" class="btn btn-danger m-2">Hide</button>
+  </div>
+
+  <div class="col-4">
+    <div>
+      <input type="text" class="m-1" [(ngModel)]="input1">
+      <input type="text" [(ngModel)]="input2">
+    </div>
+
+    @if(input1 !== input2){
+    <div>
+      <h4>Both values are not equal</h4>
+    </div>
+    }
+
+    @if(input1 === input2){
+    <div>
+      <h4>Both values are equal</h4>
+    </div>
+    }
   </div>
 
 </div>
