@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { StructuralDirectiveNgifVsIfComponent } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if.component';
@@ -20,7 +20,9 @@ import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
     // NgswitchVsSwitchComponent,
     // AttributeDirectivesComponent,
     // SignalsComponent,
-    LinkedSignalComponent
+    // LinkedSignalComponent,
+    RouterLink,
+    RouterLinkActive,
    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
