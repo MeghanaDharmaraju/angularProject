@@ -7,6 +7,7 @@ import { NgforVsForComponent } from './ngfor-vs-for/ngfor-vs-for.component';
 import { NgswitchVsSwitchComponent } from './ngswitch-vs-switch/ngswitch-vs-switch.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { SignalsComponent } from './signals/signals.component';
+import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { SignalsComponent } from './signals/signals.component';
     // NgforVsForComponent,
     // NgswitchVsSwitchComponent,
     // AttributeDirectivesComponent,
-    SignalsComponent
+    // SignalsComponent,
+    LinkedSignalComponent
    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
