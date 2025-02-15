@@ -5,7 +5,7 @@ import { privateDecrypt, privateEncrypt } from 'crypto';
 @Pipe({
   name: 'custom',
   // // to make custom pipe as impure we have to add pure property as false
-  pure: false
+  // pure: false
 })
 export class CustomPipe implements PipeTransform {
   private datePipe = new DatePipe('en-US');
