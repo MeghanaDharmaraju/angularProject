@@ -1,4 +1,5 @@
 <div class="row col-12">
+
   <div class="col-6">
     <h3 class="text-primary m-3">String type pipes</h3>
     <h4>1. UpperCasePipe : {{angularPipes | uppercase}}</h4>
@@ -16,8 +17,8 @@
     <hr>
     <h4>5. JsonPipe : {{personData | json}}</h4>
     <pre>5. JsonPipe : {{personData | json}}</pre>
-
   </div>
+
 
   <div class="col-6">
     <h3 class="text-primary m-3">Number type pipes</h3>
@@ -40,16 +41,31 @@
     <h4>9. CurrencyPipe(defalut) : {{123.20 | currency}}</h4>
     <h4>9. CurrencyPipe : {{123.20 | currency: 'EUR'}}</h4>
     <h4>9. CurrencyPipe : {{123.20 | currency: 'INR'}}</h4>
-
   </div>
-  
-  <h3 class="text-primary m-3">Async type pipes</h3>
-  <h4>10. AsyncPipe :
-    <ul>
-      @for (item of items | async; track item) {
-      <li>{{item}}</li>
-      }
-    </ul>
-  </h4>
+
+</div>
+
+<hr>
+
+<div class="row col-12">
+
+  <div class="col-6">
+    <h3 class="text-primary m-3">Async type pipes</h3>
+    <h4>10. AsyncPipe :
+      <ul>
+        @for (item of items | async; track item) {
+        <li>{{item}}</li>
+        }
+      </ul>
+    </h4>
+  </div>
+
+  <div class="col-6">
+    <h3 class="text-primary m-3">Custom type pipes</h3>
+    <!-- <h4>Mobile Number : {{mobileNumber}}</h4>
+  <h4>Mobile Number(custom pipe) : {{mobileNumber | custom}}</h4> -->
+    <h4>6. DatePipe(date) : {{currentDate | date}}</h4>
+    <h4>6. CustomizedDateFormat(date) : {{currentDate | custom}}</h4>
+  </div>
 
 </div>
