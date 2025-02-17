@@ -1,0 +1,48 @@
+<div class="container">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+    <!-- <pre>Value : {{userForm.value | json}}</pre>
+    <pre>valid : {{userForm.valid }}</pre>
+    <pre>invalid : {{userForm.invalid }}</pre>
+    <pre>touched : {{userForm.touched }}</pre>
+    <pre>untouched : {{userForm.untouched }}</pre>
+    <pre>submitted : {{userForm.submitted }}</pre> -->
+
+    <h2 class="text-center m-2">User Information</h2>
+
+    <div class="form-group m-2">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="firstName" [(ngModel)]="userObject.firstName" placeholder="Enter first name" required>
+    </div>
+
+    <div class="form-group m-2">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="lastName" [(ngModel)]="userObject.lastName" placeholder="Enter last name">
+    </div>
+   
+
+    <div class="form-group m-2">
+      <label>Email</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="userObject.email" placeholder="Enter email">
+    </div>
+
+    <div class="form-group m-2">
+      <label>Password</label>
+      <input type="password" class="form-control" name="pass" [(ngModel)]="userObject.pass" placeholder="Enter password">
+    </div>
+
+    <div class="form-check m-2">
+      <label>Check me out</label>
+      <input type="checkbox" class="form-check-input" name="isCheck" [(ngModel)]="userObject.isCheck">
+    </div>
+
+    <button class="btn btn-success m-2">Submit</button>
+    <button class="btn btn-warning m-2" (click)="setValues(userForm)">Set Values</button>
+    <button class="btn btn-primary m-2" (click)="patchValues(userForm)">Patch Values</button>
+    <button class="btn btn-secondary m-2" (click)="resetValues(userForm)">Reset</button>
+
+
+
+
+  </form>
+</div>
