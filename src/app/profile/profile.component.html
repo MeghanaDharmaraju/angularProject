@@ -1,0 +1,47 @@
+  <div class="row m-3">
+    <div class="col-4">
+      <h2>User Details</h2>
+      <!-- <ul>
+    <li>Id: {{userData.id}}</li>
+    <li>Name: {{userData.name}}</li>
+    <li>Username: {{userData.username}}</li>
+    <li>Email: {{userData.email}}</li>
+
+  </ul> -->
+      @if (isEligible) {
+      <h4 class="text-success">You are eligible for primium subscription!</h4>
+      } @else {
+      <h4 class="text-danger">You are not eligible for primium subscription!</h4>
+      }
+      <ul>
+        <li>Id: {{dummyData.id}}</li>
+        <li>Name: {{dummyData.name}}</li>
+        <li>Username: {{dummyData.username}}</li>
+        <li>Email: {{dummyData.email}}</li>
+      </ul>
+    </div>
+
+    <div class="col-8">
+      <h2>User Data From API</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.website}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

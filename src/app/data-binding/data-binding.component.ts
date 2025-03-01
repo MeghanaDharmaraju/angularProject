@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {FormsModule} from '@angular/forms'
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-data-binding',
@@ -9,6 +10,15 @@ import {FormsModule} from '@angular/forms'
   styleUrl: './data-binding.component.css'
 })
 export class DataBindingComponent {
+
+  dataSrv = inject(SharedDataService);
+  data: any;
+  isEligible: boolean = false;
+
+  constructor() {
+    this.data = this.dataSrv.userData;
+    this.isEligible = this.dataSrv.isEligibleForSubs();
+  }
 
   name : string = 'FEDLearning';
   topic: string = 'Data Binding';
